@@ -1,0 +1,17 @@
+# mutation graphql example schema
+
+# defining the new user payload, basically just takes a name.
+input NewUser {
+    name: String!
+}
+
+# defining the new screech payload, needs a user id + the content
+input NewScreech {
+    user_id: ID!
+    content: String!
+}
+
+type Mutation {
+  createUser(input: NewUser!): User!
+  createScreech(input: NewScreech!): Screech!
+}

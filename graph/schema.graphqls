@@ -1,0 +1,18 @@
+# GraphQL demo schema!
+
+type User {
+  id: ID!
+  name: String!
+  screeches: [Screech]
+}
+
+type Screech {
+  id: ID!
+  user_id: ID!
+  content: String!
+}
+
+type Query {
+  users: [User!]!
+  screeches: [Screech!]!
+}
